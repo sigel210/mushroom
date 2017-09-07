@@ -1,0 +1,380 @@
+@import './main.scss';
+
+.detailcontainer{
+    position: relative;
+    top:-60px;
+}
+.detailtop{
+    height:540px;
+    position: relative;
+    .swiper-container{
+        height:100%;
+        .swiper-wrapper{
+            position: absolute;
+            width:100%;
+            top:0;
+            bottom:0;
+            left:0;
+            right:0;
+            margin:auto;
+            img{
+                width:100%;
+            }
+        }
+    }
+    .detailtopmsg{
+        width:100%;
+        position: absolute;
+        bottom:0;
+        z-index: 999;
+        background: #fff;
+        padding:10px 5px;
+        box-sizing: border-box;
+    }
+}
+.detailcontent{
+    background: lightgray;
+    .proprice{
+        background: #fff;
+        padding:10px;
+        font-size:30px;
+    }
+    .storeaddress{
+        background: #fff;
+        @include flexBox;
+        padding:10px;
+        border-bottom: 1px solid whitesmoke;
+        span{
+            flex:1;
+            color:darkgray;
+            font-size: 12px;
+        }
+        span:first-child{
+            display:none;
+        }
+    }
+    .beforepromise{
+        background: #fff;
+        @include flexBox
+        padding:5px 0;
+        font-size: 12px;
+        color:#666;
+        span{
+            @include flex(1);
+            text-align: center;
+        }
+    }
+    .choose{
+        background: #fff;
+        margin:10px 0;
+        padding:10px;
+        font-size:12px;
+        p{
+            width:100%;
+            b{
+                float:right
+            }
+        }
+    }
+    .comment{
+        background: #fff;
+        padding:10px;
+        margin-bottom:10px;
+        .commenttit{
+            @include flexBox;
+            span{
+                padding:0 3px;
+                font-size: 12px;
+                color:#666;
+            }
+            .salenum{
+                border-left:1px solid lightgray;
+                display: block;
+                flex:1;
+            }
+        }
+        .commenttags{
+            @include flexBox;
+            flex-wrap: wrap;
+            .tags{
+                padding:5px 10px;
+                margin:10px;
+                background: pink;
+                color:deeppink;
+                font-size: 12px;
+            }
+        }
+        .commentlist{
+            .user{
+                padding:10px 20px;
+                border-bottom: 1px solid #eee;
+                .usermsg{
+                    @include flexBox;
+                    align-items: center;
+                    .imgBox{
+                        width:40px;
+                        height:40px;
+                        border-radius: 20px;
+                        overflow: hidden;
+                        margin-right:5px;
+                        img{
+                            width:100%;
+                            height:100%;
+                        }
+                    } 
+                }
+                .ok{
+                    color:#666;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+    .storemsg{
+        background: #fff;
+        padding:10px;
+        margin:10px 0;
+        .storetop{
+            @include flexBox;
+            align-items: center;
+           .storelogo{
+                width:60px;
+                height:60px;
+                margin-right:10px;
+            }
+           .shopname{
+               @include flex(1);
+               .start{
+                   color:red;
+               }
+           }
+            .tostore{
+                padding:5px 10px;
+                border:1px solid hotpink;
+                color:hotpink;
+                b{
+                    margin:2px;
+                }
+            } 
+        }
+        .storebottom{
+            @include flexBox
+            li{
+                @include flex(1);
+                text-align: center;
+                dd{
+                    font-size:12px;
+                    color:#666;
+                }
+            }
+            .ping{
+                font-size: 12px;
+                color:#666;
+                
+            }
+        }
+    }
+    .procanshutit{
+            @include flexBox;
+            background: #fff;
+            width:360px;
+            .canshu{
+                @include flex(1);
+                text-align: center;
+                padding:5px 10px;
+            }
+    }
+    .picdetail{
+        background: #fff;
+        margin: 10px 0;
+        padding: 10px;
+        .linetop{
+            width: 100px;
+            height: 1px;
+            background: #a3a3a5;
+            position: relative;
+            .lineup{
+                float: right;
+                display: inline-block;
+                width: 5px;
+                height: 5px;
+                background: #000;
+                border-radius: 50%;
+                position: absolute;
+                top: -1px;
+            }
+        }
+        .word{
+            padding:10px;
+        }
+        .linebottom{
+            float:right;
+            width:100px;
+            height: 1px;
+            background: #a3a3a5;
+            position: relative;
+            .linedown{
+                display: inline-block;
+                width: 5px;
+                height: 5px;
+                background: #000;
+                border-radius: 50%;
+                position: absolute;
+                top: -1px;
+            }
+        }
+    }
+    .detailimg{
+        width:100%;
+    }
+}
+.mengban{
+    position: fixed;
+    top:0;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.6);
+    z-index: 1000;
+    display: none;
+    .title{
+        height:20px;
+        line-height: 20px;
+        text-align: center;
+    }
+    
+    .promise{
+        z-index: 1001;
+        background: #fff;
+        position: absolute;
+        width:100%;
+        bottom:0;
+        .promiseli{
+            padding:10px;
+            @include flexBox;
+            align-items: center;
+            img{
+                width:20px;
+                height:20px;
+                margin:10px;
+            }
+        }
+        b{
+            display: block;
+            width:100%;
+            text-align: center;
+            padding:10px;
+        }
+    }
+    .lableBox{
+        z-index: 1001;
+        background: #fff;
+        position: absolute;
+        width:100%;
+        bottom:0;
+        b{
+            display: inline;
+            height:50px;
+            width:50px;
+            float:right;
+            text-align: center;
+            line-height: 50px;
+        }
+        .guigeimg{
+            width:100px;
+            position: relative;
+            top:-30px;
+            display: none;
+        }
+        .guigeprice{
+             margin-left: 10px;
+            display: none;
+        }
+        .guigekucun{
+            display: none;
+        }
+        .lablecontent{
+            padding:5px 10px;
+            margin:10px;
+            border:1px solid #000;
+            display: inline-block;
+        }
+        .actives{
+            border:1px solid pink;
+            color:pink;
+        }
+        .num{
+            padding:10px;
+            input{
+                width:30px;
+                height:30px;
+                margin:0 3px;
+                border: 1px solid;
+                text-align: center;
+            }
+            span{
+                display: inline-block;
+                width:50px;
+                height:50px;
+                text-align: center;
+                line-height: 50px;
+            }
+        }
+        .bottom{
+            @include flexBox;
+            height:50px;
+            div{
+                width:100%;
+                height:100%;
+                @include flex(1);
+                text-align: center;
+                line-height: 50px;
+                background: deeppink;
+            }
+            div:first-child{
+                background: pink;
+            }
+        }
+    }
+    
+}
+#detailfooter{
+    width:100%;
+    height:50px;
+    position: fixed;
+    bottom: 0;
+    background: #fff;
+    @include flexBox;
+    @include flex-center;
+    ul{
+        height:100%;
+        li{
+            height:100%;
+            @include flex(1);
+            @include flexBox;
+            @include flex-center;
+            @include flex-direction(column);
+            border:1px solid #eee;
+       }
+    }
+    
+    .detailfooterleft{
+        @include flexBox;
+        @include flex(1);
+        @include flex-center;
+       li{
+           color:#666;
+       }
+    }
+    .detailfooterright{
+        @include flexBox;
+        @include flex(1);
+        @include flex-center;
+        li:first-child{
+            background: pink;
+        }
+        li:last-child{
+            background: deeppink;
+        }
+    }
+}
+

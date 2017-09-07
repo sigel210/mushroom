@@ -1,0 +1,132 @@
+@import './main.scss';
+.kong{
+    height:50px;
+    width:100%;
+}
+#content{
+    background:#fff;
+    #kind{
+        @include flexBox;
+        position: relative;
+        height:100%;
+        overflow:hidden;
+        #asidelist{
+            position: fixed;
+            overflow: auto;
+            .prolist{
+                background: #eee;
+                width:90px;
+                padding:10px 0;
+                @include flexBox;
+                @include flex-center;
+                .proname{
+                    width:100%;
+                    text-align: center;
+                }
+            }
+            
+            .prolist:first-child{
+                background: #fff;
+            }
+            .prolist:first-child p{
+                color:deeppink;
+                border-left: 3px solid deeppink;
+            }
+        }
+        .mainlist{
+            margin-left:90px;
+            .mainlisttop{
+                @include flexBox;
+                flex-wrap: wrap;
+                padding:15px 10px 0;
+                .kindproLink{
+                    @include flexBox;
+                    @include flex-direction(column);
+                    @include flex-center;
+                    width:80px;
+                    height:95px;
+                    margin:5px 0;
+                    img{
+                        width:65px;
+                    }
+                    p{
+                        text-align: center;
+                    }
+                }
+            }
+            .mainlistbottom{
+                .kindprolistmoretit{
+                    @include flexBox;
+                    padding:5px 0;
+                    margin:0 10px;
+                    border:1px solid lightgray;
+                    border-left: 0;
+                    border-right: 0;
+                    .kindprolistmoretitname{
+                       @include flex(1);
+                       text-align: center;
+                       border-right:1px solid lightgray;
+                    };
+                    .kindprolistmoretitname:first-child{
+                        color:deeppink;
+                    }
+                }
+                .kindprolistmoreBox{
+                    width:100%;
+                    height:100%;
+                    @include flexBox;
+                    flex-wrap: wrap;
+                    a{
+                        width:48%;
+                        @include flexBox;
+                        @include flex-direction(column);
+                        .kindprolistmore{
+                            position: relative;
+                           img{
+                                width:134px;
+                                height:172px;
+                            } 
+                            .kindprolistmoresale{
+                                font-size: 14px;
+                                padding-left:10px;
+                                position: absolute;
+                                bottom:20px;
+                                background:rgba(0,0,0,0.4);
+                                color:#fff;
+                                width:70px;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                            }
+                        }
+                        .kindpromoredescribe{
+                            width:100%;
+                            font-size: 12px;
+                            color: black;
+                            font-weight: 900;
+                            .kindpromorename{
+                                width:130px;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                            }
+                            .kindpromorepriceandstart{
+                                @include flexBox;
+                                justify-content: space-between;
+                                padding:5px 5px 10px 10px;
+                                .kindpromoreprice{
+                                    color:deeppink;
+                                    font-size:14px;
+                                }
+                                .kindpromorestart{
+                                    color:lightgray;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}

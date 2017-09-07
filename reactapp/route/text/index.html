@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script src="jquery-1.11.0.js"></script>
+		<script>
+			$.ajax({
+				type:"get",
+				url:"http://localhost:3000/boyhome",
+				success:function(data){
+					//console.log(data)
+					var str=data.substring(39)
+					//console.log(str)
+					var data=eval(str)
+					console.log(data)
+				}
+				
+			});
+			
+			
+		</script>
+	</body>
+</html>

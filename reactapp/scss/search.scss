@@ -1,0 +1,58 @@
+@import 'main.scss';
+#searchheader{
+    height:50px;
+    width:100%;
+    @include flex;
+    @include flex-center;
+    border-bottom: 1px solid darkgray;
+    b{
+        @include flex(2);
+        text-align: center;
+    }
+    .searchipt{
+        width:80%;
+        border:2px solid #eee;
+        border-radius: 8px;
+        height:25px;
+       @include flex(11);
+    }
+    .searchword{
+       @include flex(2);
+       text-align: center;
+       font-size:12px;
+       color:gray;
+    }
+}
+#historysearch{
+    height:54px;
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    color:darkgray;
+    font-size:14px;
+    .delete{
+        float:right;
+        margin-right:10px;
+    }
+    #historysearchcontent{
+        margin-left:17.5px;
+        margin-top:10px;
+        .hisword{
+            margin:5px;
+            padding:5px;
+            border:1px solid gray;
+        }
+    }
+}
+.hotspan{
+    padding:10px;
+    font-size:14px;
+    color:darkgray;
+    .searchspan{
+        display: inline-block;
+        padding:0px 11px;
+        border:1px solid #eee;
+        margin:12.5px 0 0 10px;
+    }
+}
+

@@ -1,0 +1,180 @@
+@import './main.scss';
+body,html,#container{
+    width:100%;
+    height:100%;
+}
+#Cartheader{
+    @include flexBox;
+    padding:5px 10px 0;
+    background: ghostwhite;
+    align-items: center;
+    height:50px;
+    border-bottom: 1px solid darkgray;
+    position: fixed;
+    top : 0;
+    width:100%;
+    box-sizing: border-box;
+    .back{
+        @include flex(3);
+    }
+    .buycart{
+        @include flex(7);
+        text-align: center;
+    }
+    .edit{
+        @include flex(3);
+        text-align: right;
+        
+    }
+    b{
+        padding:10px;
+        font-size: 16px;
+    }
+}
+#Cartcontent{
+    .show{
+        border-radius: 50%;
+        border: 1px solid deeppink;
+        color:deeppink;
+    }
+    .hide{
+        color:#fff;
+        border-radius: 50%;
+        border: 1px solid #000000;
+    }
+    background: whitesmoke;
+    @include flexBox;
+    align-items: center;
+    @include flex-direction(colum);
+    width:100%;
+    .nopro{
+        width:100%;
+        height:100%;
+        @include flexBox;
+        @include flex-direction(colum);
+        align-items: center;
+        .Cartlogo{
+            display: block;
+            width:120px;
+            height:120px;
+            @include flexBox;
+            @include flex-center;
+            font-size:60px;
+            background: darkgray;
+            border-radius: 50%;
+            margin:20%;
+            b{
+              color:#fff;
+            }
+        }
+        .noprotip{
+            font-size: 12px;;
+            margin:20px;
+        }
+        .cartbtn{
+            width:50%;
+            height:30px;
+            background: deeppink;
+            color:#fff;
+            border:0;
+        }
+    }
+    .cartprolist{
+        @include flexBox;
+        @include flex-direction(colum);
+      .cartlist{
+            background: #fff;
+            width:100%;
+            height:100%;
+            margin:10px 0;
+            padding:0 10px;
+            @include flexBox;
+            align-items: center;
+            box-sizing: border-box;
+            b{
+                display: block;
+                width:16px;
+                height:16px;
+            }
+            img{
+                width:100px;
+                height:150px;
+                margin:10px;
+                margin-right:0px;
+            }
+            .cartpromsg{
+                font-size: 12px;
+                margin:10px;
+                color:#666;
+                .delete{
+                    margin-bottom:20px;
+                    text-align: right;
+                    display: none;
+                }
+                .cartproname{
+                    font-size: 14px;
+                    color:black;
+                    margin-bottom:5px;
+                }
+                .cartproguige{
+                    display: flex;
+                    @include flex-center;
+                    .size{
+                        width:60px;
+                        margin:0 4px;
+                    }
+                    .num{
+                        margin:4px 0;
+                        .controle{
+                            width:16px;
+                            display: none;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }  
+        .cartlist:first-child{
+            margin-top:70px;
+        }
+        .cartlist:last-child{
+            margin-bottom:70px;
+        }
+    }
+    .jiesuan{
+        width:100%;
+        @include flexBox;
+        align-items: center;
+        background: #fff;
+        height:50px;
+        padding:10px;
+        box-sizing: border-box;
+        position: fixed;
+        bottom: 0;
+        .left{
+            @include flexBox;
+            width:70%;
+            b{
+                display: block;
+                text-align: center;
+                border:1px solid #fff;
+                border-radius: 50%;
+                border:1px solid #000;
+                width:16px;
+                height:16px;
+            }
+            div{
+                text-align: center;
+                margin: 0 10px;
+            }
+        }
+        button{
+            width:100px;
+            height:40px;
+            margin:10px;
+            border:0;
+            background: deeppink;
+            color:#fff;
+        }
+    }
+}

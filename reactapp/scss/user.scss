@@ -1,0 +1,101 @@
+@import './main.scss';
+
+#userheader{
+    padding:20px;
+    background: lightpink;
+    @include flex-direction(colunm);
+    .userheadertop{
+        @include flexBox;
+        justify-content: space-between;
+        b{
+            color:#fff
+        }
+    }
+    .usermsg{
+        padding:10px 5px;
+        @include flexBox;
+        align-items: center;
+        .touxiang{
+            width:45px;
+            height:45px;
+            border-radius: 45px;
+            overflow: hidden;
+            margin-right:5px;
+            img{
+                width:100%;
+                height:100%;
+            }
+        }
+        .usernamemsg{
+                flex:7;
+        }
+    }
+    .sleffocus{
+        
+        @include flexBox;
+        .sleffocusitem{
+            @include flex(1);
+            p{
+                text-align: center;
+            }
+        }
+    }
+}
+#usercontent{
+    @include flexBox;
+    @include flex-direction(colunm);
+    @include flex-center;
+    background: ghostwhite;
+    b{
+        margin-right:5px;
+    }
+    ul{
+        width:100%;
+        background: #fff;
+        padding-left:10px;
+    }
+    li{
+        .right{
+            float: right;
+        }
+    }
+    .top{
+        margin-bottom:20px;
+        .topli{
+            border-bottom: 1px solid grey;
+        }
+        
+    }
+    .afterbuy{
+        @include flexBox;
+        padding: 10px 0;
+        li{
+            @include flexBox;
+            @include flex-center;
+            @include flex-direction(colunm);
+            flex:1;
+        }
+    }
+    .usermsg{
+        padding:15px 5px;
+    }
+    button{
+        display: block;
+         text-align: center;
+         line-height: 35px;
+         border-radius: 5px;
+         width:80%;
+         height:35px;
+         background: rgba(225,0,0,0.5);
+         border:0;
+         border:0;
+         color: #fff;
+         font-size:20px;
+         margin:10px 0 25px 0
+    }
+    .bu{
+        background: ghostwhite;
+    }
+    
+}
+
